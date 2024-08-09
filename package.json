@@ -62,5 +62,8 @@
     "figlet": "^1.5.0",
     "inquirer": "^8.0.0",
     "isomorphic-fetch": "^3.0.0"
+  },
+  "engines": {
+    "node": ">16.20.2 <17"
   }
 }
