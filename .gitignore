@@ -18,13 +18,12 @@ cloudbaserc.json
 .env.test.local
 .env.production.local
 .env
+scp.sh
 
-.vscode
-
-docsearch.json
+# Packages
+/packages
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-gulpfile.js
+pnpm-error.log*

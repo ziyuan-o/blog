@@ -1,109 +1,347 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+/*
+ * @Author: XJN
+ * @Date: 2023-07-02 09:37:16
+ * @LastEditors: xiaojunnanya
+ * @LastEditTime: 2024-01-19 17:17:12
+ * @FilePath: \blog\sidebars.js
+ * @Description: 
+ * @前端实习生：资源挖掘博客: 
  */
-
-module.exports = {
-  mySidebar: [{
-    type: 'doc',
-    id: 'all-intro', // 文档 ID
-    label: '开始', // 侧边栏标签
-  },
-  {
-    type: 'category',
-    label: 'html(18)',
-    items: [
-      "html/01第一个html",
-      "html/02LocalStorage与SessionStorage",
-      "html/03HTML DOM节点操作",
-      "html/04iframe框架及优缺点",
-      "html/05Cookie与Session",
-      "html/06HTML5新特性",
-      "html/07Canvas基础",
-      "html/08前端性能优化方案",
-      "html/09行内元素和块级元素",
-      "html/10Web Worker",
-      "html/11300ms点击延迟",
-      "html/12事件冒泡与阻止冒泡机制",
-      "html/13可替换元素和非替换元素",
-      "html/14HTML与XHTML区别",
-      "html/15常见的兼容性问题",
-      "html/16DOM和BOM的区别",
-      "html/17实现图片懒加载",
-      "html/18Shadow DOM的理解",
-    ]
-  },
-  {
-    type: 'category',
-    label: 'css(1)',
-    items: [
-      "css/01第一个css"
-    ]
-  },
-  {
-    type: 'category',
-    label: 'javascript(0)',
-    items: []
-  },
-  {
-    type: 'category',
-    label: 'react(0)',
-    items: []
-  },
-  {
-    type: 'category',
-    label: '微信小程序(0)',
-    items: []
-  },
-  {
-    type: 'category',
-    label: 'HTTP(0)',
-    items: []
-  },
-  {
-    type: 'category',
-    label: 'Browser(0)',
-    items: []
-  },
-  {
-    type: 'category',
-    label: 'Webpack(0)',
-    items: []
-  },
-  {
-    type: 'category',
-    label: 'git代码托管(0)',
-    items: []
-  },
-  {
-    type: 'category',
-    label: '数据结构与算法(0)',
-    items: []
-  },
-  {
-    type: 'category',
-    label: '设计模式(0)',
-    items: []
-  },
-  {
-    type: 'category',
-    label: '编码规范(0)',
-    items: []
-  },
-  {
-    type: 'category',
-    label: '杂谈(0)',
-    items: []
-  },
+/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+const sidebars = {
+  skill: [
+    'skill/introduction',
+    {
+      label: 'HTML与CSS',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'skill/HTML与CSS/html',
+        'skill/HTML与CSS/css',
+        'skill/HTML与CSS/screen',
+        'skill/HTML与CSS/skill',
+        'skill/HTML与CSS/canvas'
+      ],
+    },
+    {
+      label: 'JavaScript',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'skill/JavaScript/javascript1',
+        'skill/JavaScript/javascript2',
+        'skill/JavaScript/javascript3',
+        'skill/JavaScript/javascript4',
+        'skill/JavaScript/javascripttip'
+      ],
+    },
+    {
+      label: 'Vue',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'skill/Vue/vue2'
+      ],
+    },
+    {
+      label: 'React',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'skill/React/react',
+        'skill/React/reacthooks',
+        'skill/React/reactwebsite',
+        'skill/React/tsreact',
+        'skill/React/reactuse',
+      ],
+    },
+    {
+      label: 'Node',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'skill/Node/node',
+        'skill/Node/nodesql',
+        'skill/Node/nodeuse',
+        'skill/Node/nestjs',
+        'skill/Node/nestjsbefore'
+      ],
+    },
+    {
+      label: 'TypeScript',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'skill/TypeScript/typescript'
+      ],
+    },
+    {
+      label: '微信小程序',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'skill/微信小程序/wechat1',
+        'skill/微信小程序/wechat2',
+        'skill/微信小程序/wechat3',
+      ],
+    },
+    {
+      label: 'Uniapp',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'skill/Uniapp/uniapp'
+      ],
+    },
+    {
+      label: '数据结构与算法',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'skill/数据结构与算法/build',
+        'skill/数据结构与算法/count',
+        'skill/数据结构与算法/leetcode',
+      ],
+    },
+    {
+      label: '前端工程化',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'skill/前端工程化/frontendEngineering',
+        'skill/前端工程化/webpack',
+        'skill/前端工程化/gitgithub',
+        'skill/前端工程化/usegit',
+        'skill/前端工程化/gitcommit',
+      ],
+    },
+    {
+      label: '力扣算法',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'skill/力扣算法/algorithmbefore',
+        'skill/力扣算法/algorithmarr',
+      ],
+    },
+    {
+      label: '抓住小细节',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'skill/抓住小细节/detail',
+        'skill/抓住小细节/detailhtmlcss',
+        'skill/抓住小细节/detailjs',
+        'skill/抓住小细节/detailreact',
+        'skill/抓住小细节/detailvue',
+        'skill/抓住小细节/detailnode',
+        'skill/抓住小细节/detailts',
+        'skill/抓住小细节/detailllqyl',
+        'skill/抓住小细节/detailwl',
+        'skill/抓住小细节/detailbc',
+      ],
+    }
   ],
-
-  测试文档:{
-    前言: ["测试文档/测试文档-intro"],
-    分类1: ["测试文档/分类1/测试文档-index"],
-    分类2: ["测试文档/分类2/测试文档-index"],
-  },
+  thing: [
+    'thing/introduction',
+    {
+      label: 'HTML与CSS',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'thing/HTML与CSS/threecolumn',
+      ],
+    },
+    {
+      label: 'JavaScript',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'thing/JavaScript/console',
+        'thing/JavaScript/eventLoop',
+        'thing/JavaScript/lightDeppCopy',
+        'thing/JavaScript/jsRunPrinciple',
+        'thing/JavaScript/scope',
+        'thing/JavaScript/closure',
+        'thing/JavaScript/setTimeout',
+        'thing/JavaScript/noconsole',
+        'thing/JavaScript/sessionStorage',
+        'thing/JavaScript/jslanguagedesign',
+      ],
+    },
+    {
+      label: 'React',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'thing/React/reactstate',
+        'thing/React/setreact',
+        'thing/React/removeeffect',
+        'thing/React/build-your-own-react',
+      ],
+    },
+    {
+      label: 'Node',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'thing/Node/commonjsnode',
+      ],
+    },
+    {
+      label: '前端工程化',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'thing/前端工程化/dependencies',
+      ],
+    },
+    {
+      label: '网络',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'thing/网络/inputUrlHappen',
+        'thing/网络/inputUrlHappenAdd',
+        'thing/网络/websocket',
+        'thing/网络/networkModel',
+        'thing/网络/httpsencryption',
+        'thing/网络/websafe',
+      ],
+    },
+  ],
+  use: [
+    'use/introduction',
+    {
+      label: '工具',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'use/tool/windowcmd',
+        'use/tool/yalc',
+        'use/tool/xswitch',
+        'use/tool/release-it',
+        'use/tool/mvn',
+        'use/tool/delete_node_modules',
+        'use/tool/markdown',
+        'use/tool/gitee',
+      ],
+    },
+    {
+      label: '技术',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'use/technology/bigfile',
+        'use/technology/tsaxios',
+        'use/technology/qiankun',
+      ],
+    },
+    {
+      label: '其他',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'use/other/cli',
+        'use/other/scpsh',
+        'use/other/projectUbun',
+        'use/other/hexo',
+        'use/other/ubuntusetvue',
+        'use/other/useubuntu',
+        'use/other/googletoolsipload',
+      ],
+    },
+    {
+      label: '开发纪录',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'use/开发纪录/whaledevfrontend',
+        'use/开发纪录/whaledevbackEnd',
+      ],
+    },
+  ],
+  hobby: [
+    'hobby/introduction',
+    {
+      label: '摄影',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'hobby/摄影/studyphotography',
+        'hobby/摄影/studyphoto',
+      ],
+    },
+    {
+      label: '旅行',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'hobby/旅行/travel',
+      ],
+    },
+  ],
+  summarize: [
+    'summarize/introduction',
+    {
+      label: '2023',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'summarize/2023/frondstudy21',
+      ],
+    },
+  ],
   办公专区:{
     前言: ["办公专区/办公专区-intro"],
     windows软件: ["办公专区/windows软件/pdf-BatchUnlock",
@@ -185,20 +423,16 @@ windows系统: ["办公专区/windows系统/Windows11-game",
     link3: ["学习专区/自建网站/link3/link3-js",
            "学习专区/自建网站/link3/link3-zc"
     ],
+    python: ["学习专区/python/python-intro"]
   },
   营销专区:{
     前言: ["营销专区/营销专区-intro"],
-    
+    知乎: ["营销专区/知乎/zhihu-intro"],
+    微博: ["营销专区/微博/weibo-intro"],
   },
-  python: {
-    前言: ["python/python-intro"]
-  },
-  知乎: {
-    前言: ["知乎/zhihu-intro"]
-  },
-  微博: {
-    前言: ["微博/weibo-intro"]
-  },
+  
+  
 
-};
+}
 
+module.exports = sidebars

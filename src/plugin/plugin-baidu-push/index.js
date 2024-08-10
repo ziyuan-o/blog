@@ -1,11 +1,11 @@
 module.exports = function (context, options) {
   return {
-    name: "docusaurus-baidu-push-plugin",
+    name: 'docusaurus-plugin-baidu-push',
     injectHtmlTags() {
       return {
         headTags: [
           {
-            tagName: "script",
+            tagName: 'script',
             innerHTML: `
             (function(){
               var bp = document.createElement('script');
@@ -23,7 +23,7 @@ module.exports = function (context, options) {
           `,
           },
         ],
-      };
+      }
     },
-  };
-};
+  }
+}

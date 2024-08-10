@@ -1,255 +1,332 @@
-const path = require("path");
-const math = require("remark-math");
-const katex = require("rehype-katex");
+const path = require('path')
 
-module.exports = {
-  title: "资源挖掘博客", // 网站标签名称
-  // tagline:
-  //   "帮助你提升前端开发技能，分享 HTML、CSS、JavaScript、React 和 Vue 等开发实战经验",
-  titleDelimiter: "-",
-  url: "https://zhangqiang.vercel.app",
-  baseUrl: "/",
-  favicon: "https://cdn-thumbs.imagevenue.com/51/81/5f/ME18VMNX_t.jpg", // 网站图标
-  organizationName: "zhangqiang", // Usually your GitHub org/user name.
-  projectName: "zhangqiang.vercel.app", // Usually your repo name.
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  onBrokenLinks: 'ignore',
+  title: '资源挖掘博客',
+  titleDelimiter: '-',
+  url: 'http://xiaojunnan.cn',
+  baseUrl: '/',
+  favicon: 'https://cdn-thumbs.imagevenue.com/51/81/5f/ME18VMNX_t.jpg',
+  organizationName: 'jl',
+  projectName: 'blog',
+  tagline: '挖掘数据爱好者',
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
-    // announcementBar: {
-    //   id: "feature_release", // Any value that will identify this message.
-    //   content: `更新<a href='/docs/videos/vue/vue-echarts-doughnut-chart'>《Vue 3.0 + ECharts 实现电影票房自定义环形图教程》配套文本</a>；上线小工具栏目，添加<a href='/docs/tools/glassmorphism-generator'>玻璃特效生成器小工具，点击查看</a>`,
-    //   backgroundColor: "#fafbfc", // Defaults to `#fff`.
-    //   textColor: "#091E42", // Defaults to `#000`.
-    // },
-    hideableSidebar: true,
-    // docs:{
-    //   sidebar:{
-    //     hideable: true,
-    //   }
-    // },
-    navbar: {
-      title: "资源挖掘博客",
-      logo: {
-        alt: "资源挖掘博客",
-        src: "https://cdn-thumbs.imagevenue.com/51/81/5f/ME18VMNX_t.jpg",
-        srcDark: "https://cdn-thumbs.imagevenue.com/51/81/5f/ME18VMNX_t.jpg",
-      },
-      items: [{
-        type: "localeDropdown",
-        position: "left",
-      },
-      {
-        to: "/",
-        label: "首页",
-        position: "right",
-      },
-      {
-        to: "docs/赚钱资源/赚钱资源-intro",
-        label: "赚钱资源",
-        position: "right",
-      },
-      {
-        to: "docs/区块链专区/区块链专区-intro",
-        label: "区块链专区",
-        position: "right",
-      },
-      {
-        label: "营销专区",
-        position: "right",
-        items: [
-          {
-            label: "知乎",
-            to: "docs/知乎/zhihu-intro",
-          },
-          {
-            label: "微博",
-            to: "docs/微博/weibo-intro",
-          }
-        ],
-      },
-      {
-        label: "学习专区",
-        position: "right",
-        items: [
-          {
-            label: "python",
-            to: "docs/python/python-intro",
-          }
-        ],
-
-      },
-      {
-        to: "docs/办公专区/办公专区-intro",
-        label: "办公专区",
-        position: "right",
-      },
-      ],
+    image: 'https://cdn-thumbs.imagevenue.com/51/81/5f/ME18VMNX_t.jpg',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
     },
-    algolia: {
-      apiKey: "fabfb0e9997e101154ed85d64b7b6a3c",
-      indexName: "ZXUQIANCN",
-      appId: "LIJMO3C9C4",
-      contextualSearch: true,
+    metadata: [
+      {
+        name: 'keywords',
+        content: '资源挖掘博客',
+      },
+      {
+        name: 'keywords',
+        content: 'blog, javascript, typescript, node, react, vue, web',
+      },
+      {
+        name: 'keywords',
+        content: '挖掘数据爱好者',
+      },
+    ],
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
+    navbar: {
+      title: '资源挖掘博客',
+      logo: {
+        alt: '资源挖掘博客',
+        src: 'https://cdn-thumbs.imagevenue.com/51/81/5f/ME18VMNX_t.jpg',
+        srcDark: 'https://cdn-thumbs.imagevenue.com/51/81/5f/ME18VMNX_t.jpg',
+      },
+      hideOnScroll: true,
+      items: [
+        {
+          to: '/',
+          label: '首页',
+          position: 'right',
+        },
+        {
+
+          to: "docs/赚钱资源/赚钱资源-intro",
+          label: "赚钱资源",
+          position: "right",
+    
+        },
+        {
+          to: "docs/区块链专区/区块链专区-intro",
+          label: "区块链专区",
+          position: "right",
+        },
+        {
+          to: "docs/营销专区/营销专区-intro",
+          label: "营销专区",
+          position: "right",
+         
+        },
+        {
+          to: "docs/学习专区/学习专区-intro",
+          label: "学习专区",
+          position: "right",
+        },
+        {
+          to: "docs/办公专区/办公专区-intro",
+          label: "办公专区",
+          position: "right",
+        },
+  
+      ],
     },
     footer: {
-      style: "dark",
-      links: [{
-        title: "赚钱专区",
-        items: [{
-          label: "电脑专区",
-          to: "docs/电脑专区/电脑专区-intro",
+      style: 'dark',
+      links: [
+        {
+          title: '赚钱资源',
+          items: [
+            {
+              label: '区块链',
+              to: 'docs/区块链专区/区块链专区-intro',
+            },
+            {
+              label: '赚钱网盘',
+              to: 'tags',
+            },
+            {
+              label: '赚钱缩址',
+              to: 'archive',
+            },
+            {
+              label: '威客众包',
+              to: 'docs/skill',
+            },
+            {
+              label: '调查任务',
+              to: 'project',
+            }
+          ],
         },
         {
-          label: "手机专区",
-          to: "docs/安卓专区/安卓专区-intro",
-        }
-        ],
-      },
-      {
-        title: "办公专区",
-        items: [
-        {
-          label: "办公专区",
-          to: "docs/办公专区/办公专区-intro",
-        }
-        ],
-      },
-      {
-        title: "友情链接",
-        items: [{
-          label: "潜心专研的小张同学",
-          to: "https://www.zhangqiang.hk.cn/",
+          title: '营销专区',
+          items: [
+            {
+              label: '知乎',
+              to: '/about',
+            },
+            {
+              label: '微博',
+              href: 'https://github.com/xiaojunnanya',
+            },
+            
+          ],
         },
         {
-          label: "峰华前端工程师",
-          to: "https://zxuqian.cn",
+          title: '学习专区',
+          items: [
+            {
+              label: 'python',
+              to: '/about',
+            }
+           
+          ],
         },
-        ],
-      },
+        {
+          title: '办公专区',
+          items: [
+            {
+              label: '办公软件',
+              to: 'docs/办公专区/办公专区-intro',
+            }
+           
+          ],
+        },
+        {
+          title: '友情链接',
+          items: [
+            {
+              label: '鲸落',
+              position: 'right',
+              href: 'http://www.xiaojunnan.cn/',
+            }
+          ],
+        },
       ],
-      copyright: `<p>Copyright © ${new Date().getFullYear()} 111峰华 (张旭乾) Built with Docusaurus.</p>
-      <p><a href="http://beian.miit.gov.cn/" style="color: hsl(210deg, 100%, 80%)">冀ICP备14007097号-3</a></p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-      <img alt="Creative Commons License" style="border-width:0" src="/img/creative-commons-license-icon.png" /></a>
-      <br />本站所有内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh-Hans" 
-      style="color: hsl(210deg, 100%, 80%)">CC BY-NC 4.0 协议</a>，转载须注明署名和出处，且不可用于商业用途。
-      若与其他同步平台协议冲突，以本网站为准。`,
+      copyright:  `Copyright © ${new Date().getFullYear()} 资源挖掘博客<p><a href="https://beian.miit.gov.cn" class="footer_lin">皖ICP备2023012012号</a></p>`,
     },
     prism: {
-      theme: require("prism-react-renderer/themes/github"),
-      darkTheme: require("prism-react-renderer/themes/oceanicNext"),
-      defaultLanguage: "javascript",
+      theme: require('prism-react-renderer/themes/vsLight'),
+      darkTheme: require('prism-react-renderer/themes/vsDark'),
+      additionalLanguages: ['java', 'php', 'rust', 'toml'],
+      defaultLanguage: 'javascript',
+      magicComments: [
+        {
+          className: 'theme-code-block-highlighted-line',
+          line: 'highlight-next-line',
+          block: { start: 'highlight-start', end: 'highlight-end' },
+        },
+        {
+          className: 'code-block-error-line',
+          line: 'This will error',
+        },
+      ],
     },
-    // googleAnalytics: {
-    //   trackingID: "UA-118572241-1",
-    //   anonymizeIP: true, // Should IPs be anonymized?
-    // },
-    // gtag: {
-    //   trackingID: "G-6PSESJX0BM",
-    //   // Optional fields.
-    //   anonymizeIP: true, // Should IPs be anonymized?
-    // },
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 4,
+    },
+    algolia: {
+      appId: 'RIMEHIIIP6',
+      apiKey: '0bb55046a96eb973a220fe57b2d2d3b5',
+      indexName: 'xiaojunnan'
+    },
+    zoom: {
+      selector: '.markdown :not(em) > img',
+      background: {
+        light: 'rgb(255, 255, 255)',
+        dark: 'rgb(50, 50, 50)',
+      },
+      config: {},
+    },
+    matomo: {
+      matomoUrl: 'http://xiaojunnan.cn',
+      siteId: '1',
+      phpLoader: 'matomo.php',
+      jsLoader: 'matomo.js',
+    },
+    giscus: {
+      repo: 'xiaojunnanya/blog',
+      repoId: 'R_kgDOJ23KyQ',
+      category: 'General',
+      categoryId: 'DIC_kwDOJ23Kyc4Ccv-l',
+      theme: 'light',
+      darkTheme: 'dark',
+    },
+    liveCodeBlock: {
+      playgroundPosition: 'top',
+    },
+    socials: {
+      github: 'https://github.com/xiaojunnanya',
+      juejin: 'https://juejin.cn/user/3633256370537165',
+      // twitter: 'https://twitter.com',
+      // csdn: 'https://blog.csdn.net',
+      // qq: 'https://wpa.qq.com/msgrd?v=3&amp;uin=911993023&amp;site=qq',
+      // zhihu: 'https://www.zhihu.com/people',
+      // cloudmusic: 'https://music.163.com/#/user/home?id=1333010742',
+    },
   },
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'description',
+        content: '资源挖掘博客',
+      },
+    },
+  ],
   presets: [
     [
-      "@docusaurus/preset-classic",
-      {
+      '@docusaurus/preset-classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/JACK-ZHANG-coming/my-now-blog/blob/main",
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
-          showLastUpdateTime: true,
-          // sidebar:{
-          //   hideeble:{
-
-          //   }
-          // }
+          path: 'docs',
+          sidebarPath: 'sidebars.js',
         },
-        blog: {
-          path: "./blog",
-          routeBasePath: "/",
-          blogSidebarTitle: "近期文章",
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
-          feedOptions: {
-            type: "all",
-            title: "峰华前端工程师1111",
-            copyright: `Copyright © ${new Date().getFullYear()} 2222峰华 (张旭乾) Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/">冀ICP备14007097号-3</a></p>`,
-          },
-        },
+        blog: false,
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: [require.resolve('./src/css/custom.scss')],
         },
         sitemap: {
-          changefreq: "daily",
+          changefreq: 'daily',
           priority: 0.5,
         },
-      },
+        gtag: {
+          trackingID: 'G-S4SD5NXWXF',
+          anonymizeIP: true,
+        },
+        // debug: true,
+      }),
     ],
   ],
-  // themes: ["@docusaurus/theme-live-codeblock"],
+  // themes: ['@docusaurus/theme-live-codeblock'],
   plugins: [
-    path.resolve(__dirname, "./src/plugin/plugin-baidu-analytics"),
-    path.resolve(__dirname, "./src/plugin/plugin-baidu-push"),
-    // "@docusaurus/plugin-ideal-image",
-    path.resolve(__dirname, "./src/plugin/plugin-google-adsense"),
-    path.resolve(__dirname, "./src/plugin/plugin-onesignal-push"),
-    "docusaurus2-dotenv",
+    'docusaurus-plugin-matomo',
+    'docusaurus-plugin-image-zoom',
+    'docusaurus-plugin-sass',
+    path.resolve(__dirname, './src/plugin/plugin-baidu-tongji'),
+    path.resolve(__dirname, './src/plugin/plugin-baidu-push'),
     [
-      "@docusaurus/plugin-content-blog",
+      path.resolve(__dirname, './src/plugin/plugin-content-blog'),
       {
-        id: "lifestyle-blog",
-        routeBasePath: "lifestyle",
-        path: "./lifestyle",
+        path: 'blog',
+        routeBasePath: '/',
+        editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
+          `https://github.com/xiaojunnanya/blog`,
+        editLocalizedFiles: false,
+        blogDescription: '资源挖掘博客',
+        blogSidebarCount: 10,
+        blogSidebarTitle: '最近更新',
+        postsPerPage: 10,
+        showReadingTime: true,
+        readingTime: ({ content, frontMatter, defaultReadingTime }) =>
+          defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
-          type: "all",
-          title: "峰华前端工程师2222",
-          copyright: `Copyright © ${new Date().getFullYear()} 3333峰华 (张旭乾) Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/">冀ICP备14007097号-3</a></p>`,
+          type: 'all',
+          title: '资源挖掘博客',
+          copyright: `Copyright © ${new Date().getFullYear()} 资源挖掘博客<p><a href="https://beian.miit.gov.cn" class="footer_lin">皖ICP备2023012012号</a></p>`,
         },
       },
     ],
-    // [
-    //   "@easyops-cn/docusaurus-search-local",
-    //   {
-    //     hashed: true,
-    //     // indexPages: true,
-    //     blogRouteBasePath: "/",
-    //     language: ["en", "zh"],
-    //   },
-    // ],
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        disableInDev: false,
+      },
+    ],
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          'appInstalled',
+          'standalone',
+          'queryString',
+        ],
+        pwaHead: [
+          {
+            tagName: 'link',
+            rel: 'icon',
+            href: '/img/logo.png',
+          },
+          {
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json',
+          },
+          {
+            tagName: 'meta',
+            name: 'theme-color',
+            content: 'rgb(51 139 255)',
+          },
+        ],
+      },
+    ],
   ],
-  stylesheets: [{
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    type: "text/css",
-  },
-  {
-    href: "/katex/katex.min.css",
-    type: "text/css",
-    integrity: "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
-    crossorigin: "anonymous",
-  },
-  {
-    href: "https://fonts.font.im/css?family=Raleway:500,700&display=swap",
-    type: "text/css",
-    rel: "stylesheet",
-  },
-    // {
-    //   href: "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap",
-    //   type: "text/css",
-    //   rel: "stylesheet",
-    // },
-  ],
+  stylesheets: [],
   i18n: {
-    defaultLocale: "zh-CN",
-    locales: ["zh-CN"],
-    // locales: ["zh-CN", "en"],
-    localeConfigs: {
-      "zh-CN": {
-        label: "中文",
-      },
-      en: {
-        label: "English",
-      },
-    },
+    defaultLocale: 'zh-CN',
+    locales: ['zh-CN'],
+    // localeConfigs: {
+    //   en: {
+    //     htmlLang: 'en-GB',
+    //   },
+    // },
   },
-};
+}
+
+module.exports = config
